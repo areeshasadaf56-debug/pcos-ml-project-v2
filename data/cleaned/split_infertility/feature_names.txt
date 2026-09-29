@@ -1,0 +1,3 @@
+I   beta-HCG(mIU/mL)
+II    beta-HCG(mIU/mL)
+AMH(ng/mL)

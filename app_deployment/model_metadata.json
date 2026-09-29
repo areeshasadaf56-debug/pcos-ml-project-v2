@@ -1,0 +1,94 @@
+{
+  "model_name": "NaiveBayes",
+  "calibrated": true,
+  "feature_order": [
+    "Age (yrs)",
+    "BMI",
+    "Cycle(R/I)",
+    "Cycle length(days)",
+    "PRL(ng/mL)",
+    "Vit D3 (ng/mL)",
+    "PRG(ng/mL)",
+    "RBS(mg/dl)",
+    "BP _Systolic (mmHg)",
+    "BP _Diastolic (mmHg)",
+    "Follicle No. (L)",
+    "Follicle No. (R)",
+    "Avg. F size (L) (mm)",
+    "Avg. F size (R) (mm)",
+    "Endometrium (mm)",
+    "Weight gain(Y/N)",
+    "hair growth(Y/N)",
+    "Skin darkening (Y/N)",
+    "Hair loss(Y/N)",
+    "Pimples(Y/N)",
+    "Fast food (Y/N)",
+    "Reg.Exercise(Y/N)"
+  ],
+  "categorical_encodings": {
+    "Cycle(R/I)": {
+      "Regular": 2,
+      "Irregular": 4
+    },
+    "binary_yes_no_fields": [
+      "Weight gain(Y/N)",
+      "hair growth(Y/N)",
+      "Skin darkening (Y/N)",
+      "Hair loss(Y/N)",
+      "Pimples(Y/N)",
+      "Fast food (Y/N)",
+      "Reg.Exercise(Y/N)"
+    ],
+    "binary_encoding": {
+      "Yes": 1,
+      "No": 0
+    }
+  },
+  "bmi_formula": "BMI = weight_kg / ((height_cm / 100) ** 2)",
+  "all_model_metrics": {
+    "LogisticRegression": {
+      "accuracy": 0.8888888888888888,
+      "precision": 0.8285714285714286,
+      "recall": 0.8285714285714286,
+      "f1": 0.8285714285714286
+    },
+    "DecisionTree": {
+      "accuracy": 0.8148148148148148,
+      "precision": 0.6923076923076923,
+      "recall": 0.7714285714285715,
+      "f1": 0.7297297297297297
+    },
+    "RandomForest": {
+      "accuracy": 0.9166666666666666,
+      "precision": 0.9333333333333333,
+      "recall": 0.8,
+      "f1": 0.8615384615384616
+    },
+    "SVM": {
+      "accuracy": 0.8888888888888888,
+      "precision": 0.8484848484848485,
+      "recall": 0.8,
+      "f1": 0.8235294117647058
+    },
+    "KNN": {
+      "accuracy": 0.8796296296296297,
+      "precision": 0.8928571428571429,
+      "recall": 0.7142857142857143,
+      "f1": 0.7936507936507936
+    },
+    "NaiveBayes": {
+      "accuracy": 0.9351851851851852,
+      "precision": 0.9117647058823529,
+      "recall": 0.8857142857142857,
+      "f1": 0.8985507246376812,
+      "calibrated_accuracy": 0.9166666666666666,
+      "calibrated_f1": 0.8656716417910447
+    },
+    "XGBoost": {
+      "accuracy": 0.9074074074074074,
+      "precision": 0.8571428571428571,
+      "recall": 0.8571428571428571,
+      "f1": 0.8571428571428571
+    }
+  }
+}
